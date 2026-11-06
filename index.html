@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Горный ключ — Доставка питьевой воды</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Шапка сайта -->
+  <header class="header">
+    <div class="container header__container">
+      <div class="header__left">
+        <button class="burger-btn" id="burgerBtn" aria-label="Открыть меню">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <a href="#" class="logo">
+          <svg class="logo__icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 26C8 22 14 22 18 26C22 22 28 22 32 26" stroke="#0077C8" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M7 21C11 17 15 17 18 20C21 17 25 17 29 21" stroke="#00A3E0" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M11 15C14 12 16 12 18 14C20 12 22 12 25 15" stroke="#0077C8" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+          <div class="logo__text">
+            <span class="logo__title">Горный</span>
+            <span class="logo__subtitle">ключ</span>
+          </div>
+        </a>
+      </div>
+
+      <nav class="nav" id="mainNav">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#catalog" class="nav__link">Каталог</a></li>
+          <li class="nav__item"><a href="#reviews" class="nav__link">Отзывы</a></li>
+          <li class="nav__item"><a href="#delivery" class="nav__link">Доставка</a></li>
+          <li class="nav__item"><a href="#contacts" class="nav__link">Контакты</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__contacts">
+        <div class="header__schedule">
+          <span class="header__schedule-title">График доставки:</span>
+          <span class="header__schedule-time">пн-пт: 09:00 - 18:00</span>
+          <span class="header__schedule-time">сб: 10:00 - 15:00</span>
+        </div>
+        <div class="header__phone-wrap">
+          <a href="tel:+74951234567" class="header__phone">+7 (495) 123-45-67</a>
+          <span class="header__callback">Заказать звонок</span>
+        </div>
+        <a href="tel:+74951234567" class="header__phone-icon" aria-label="Позвонить">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Главный экран (Hero) -->
+    <section class="hero">
+      <div class="hero__bg" style="background-image: url('img/главная.jpg');"></div>
+      <div class="hero__overlay"></div>
+      <div class="container hero__container">
+        <div class="hero__content">
+          <h1 class="hero__title">2 БУТЫЛКИ ВОДЫ +<br>ПОМПА ЗА 1222 РУБ.</h1>
+          <a href="#catalog" class="btn btn--primary hero__btn">ЗАКАЗАТЬ</a>
+        </div>
+      </div>
+      <div class="hero__ribbon">
+        <div class="container">
+          <p class="hero__ribbon-text">Оставь отзыв и получи бутыль воды в подарок!</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Информационная плашка -->
+    <div class="container notice-container">
+      <div class="notice-badge">
+        <span class="notice-badge__tag">ВАЖНО!</span>
+        <p class="notice-badge__text">
+          Заказы после 15:00 обрабатываются на следующий день.<br>
+          Выходные дни обрабатываются в Понедельник.
+        </p>
+      </div>
+    </div>
+
+    <!-- Каталог товаров -->
+    <section class="catalog section" id="catalog">
+      <div class="container">
+        <div class="catalog__grid">
+
+          <!-- Карточка 1 -->
+          <article class="card" data-product-id="1">
+            <div class="card__img-wrap">
+              <img src="/img/2 бутыли + помпа.jpg" alt="2 бутылки воды + помпа" class="card__img" onerror="this.src='https://placehold.co/400x300/e9f3f9/0077c8?text=2+бутылки+%2B+помпа'">
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">2 бутылки воды + помпа<br>за 1 222 руб.!</h3>
+              
+              <div class="card__info-box">
+                <p class="card__info-accent">Акция для новых клиентов</p>
+                <p class="card__info-desc">*Помпа выдается в пользование при условии ежемесячного заказа 2 бутылей воды</p>
+              </div>
+
+              <div class="card__footer">
+                <div class="counter">
+                  <button type="button" class="counter__btn counter__btn--minus" aria-label="Уменьшить">−</button>
+                  <input type="number" class="counter__input" value="1" min="1" max="99" readonly>
+                  <button type="button" class="counter__btn counter__btn--plus" aria-label="Увеличить">+</button>
+                </div>
+                <button type="button" class="btn btn--primary card__btn-buy">
+                  <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="9" cy="21" r="1"></circle>
+                    <circle cx="20" cy="21" r="1"></circle>
+                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                  </svg>
+                  В корзину
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Карточка 2 -->
+          <article class="card" data-product-id="2">
+            <div class="card__img-wrap">
+              <img src="/img/3 бутыли.jpg" alt="Питьевая вода 19л" class="card__img" onerror="this.src='https://placehold.co/400x300/e9f3f9/0077c8?text=3+бутылки'">
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Питьевая вода</h3>
+              <div class="card__price">300 ₽</div>
+              
+              <div class="card__tiers">
+                <div class="card__tier-item"><span>При заказе 1 бут.</span> <strong>300 руб/шт.</strong></div>
+                <div class="card__tier-item"><span>При заказе 2 бут.</span> <strong>250 руб/шт.</strong></div>
+                <div class="card__tier-item"><span>При заказе 3 бут.</span> <strong>240 руб/шт.</strong></div>
+                <div class="card__tier-item"><span>При заказе 4 бут.</span> <strong>240 руб/шт.</strong></div>
+                <div class="card__tier-item"><span>При заказе 5 бут.</span> <strong>240 руб/шт.</strong></div>
+                <div class="card__tier-item"><span>При заказе 6 бут.</span> <strong>220 руб/шт.</strong></div>
+              </div>
+
+              <div class="card__footer">
+                <div class="counter">
+                  <button type="button" class="counter__btn counter__btn--minus" aria-label="Уменьшить">−</button>
+                  <input type="number" class="counter__input" value="1" min="1" max="99" readonly>
+                  <button type="button" class="counter__btn counter__btn--plus" aria-label="Увеличить">+</button>
+                </div>
+                <button type="button" class="btn btn--primary card__btn-buy">
+                  <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="9" cy="21" r="1"></circle>
+                    <circle cx="20" cy="21" r="1"></circle>
+                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                  </svg>
+                  В корзину
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Карточка 3 -->
+          <article class="card" data-product-id="3">
+            <div class="card__img-wrap">
+              <img src="/img/бутыль премиум.jpg" alt="Питьевая вода Премиум" class="card__img" onerror="this.src='https://placehold.co/400x300/e9f3f9/0077c8?text=Бутылка'">
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Питьевая вода «Премиум»<br><span class="card__subtitle">в одноразовой бутылке</span></h3>
+              <div class="card__price">390 ₽</div>
+              
+              <div class="card__tiers">
+                <div class="card__tier-item"><span>При заказе 1 бут.</span> <strong>390 руб/шт.</strong></div>
+                <div class="card__tier-item"><span>При заказе 2 бут.</span> <strong>370 руб/шт.</strong></div>
+                <div class="card__tier-item"><span>При заказе 3 бут.</span> <strong>350 руб/шт.</strong></div>
+              </div>
+
+              <div class="card__footer">
+                <div class="counter">
+                  <button type="button" class="counter__btn counter__btn--minus" aria-label="Уменьшить">−</button>
+                  <input type="number" class="counter__input" value="1" min="1" max="99" readonly>
+                  <button type="button" class="counter__btn counter__btn--plus" aria-label="Увеличить">+</button>
+                </div>
+                <button type="button" class="btn btn--primary card__btn-buy">
+                  <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="9" cy="21" r="1"></circle>
+                    <circle cx="20" cy="21" r="1"></circle>
+                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                  </svg>
+                  В корзину
+                </button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Секция отзывов -->
+    <section class="reviews section" id="reviews">
+      <div class="container">
+        <h2 class="section-title">Отзывы покупателей</h2>
+
+        <div class="reviews__grid">
+
+          <!-- Отзыв 1 -->
+          <article class="review-card">
+            <header class="review-card__header">
+              <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&auto=format&fit=crop&q=80" alt="Полина" class="review-card__avatar">
+              <div class="review-card__meta">
+                <h4 class="review-card__name">Полина</h4>
+                <time class="review-card__date" datetime="2026-08-19">19.08.2026</time>
+              </div>
+            </header>
+            <div class="review-card__stars">★★★★★</div>
+            <p class="review-card__text">
+              Заказываем воду постоянно в офис. Доставка быстрая, курьеры вежливые и всегда поднимают до двери. Вода мягкая, чистая, чайник без накипи. Очень довольны!
+            </p>
+            <footer class="review-card__footer">
+              <span class="review-card__source">Яндекс Карты</span>
+              <span class="review-card__rating">★ 5.0</span>
+            </footer>
+          </article>
+
+          <!-- Отзыв 2 -->
+          <article class="review-card">
+            <header class="review-card__header">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80" alt="Александр" class="review-card__avatar">
+              <div class="review-card__meta">
+                <h4 class="review-card__name">Александр</h4>
+                <time class="review-card__date" datetime="2026-07-22">22.07.2026</time>
+              </div>
+            </header>
+            <div class="review-card__stars">★★★★★</div>
+            <p class="review-card__text">
+              Отличная акция с помпой при первом заказе. Привезли точно в оговоренный интервал времени. Качество воды на высоте, без посторонних привкусов. Будем заказывать ещё.
+            </p>
+            <footer class="review-card__footer">
+              <span class="review-card__source">Яндекс Карты</span>
+              <span class="review-card__rating">★ 5.0</span>
+            </footer>
+          </article>
+
+          <!-- Отзыв 3 -->
+          <article class="review-card">
+            <header class="review-card__header">
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&auto=format&fit=crop&q=80" alt="Алина Мих." class="review-card__avatar">
+              <div class="review-card__meta">
+                <h4 class="review-card__name">Алина Мих.</h4>
+                <time class="review-card__date" datetime="2026-06-28">28.06.2026</time>
+              </div>
+            </header>
+            <div class="review-card__stars">★★★★★</div>
+            <p class="review-card__text">
+              Берем воду «Премиум» в одноразовых бутылях — очень удобно, не нужно хранить пустую тару для обмена. Вода вкусная, свежая. Спасибо за качественный сервис!
+            </p>
+            <footer class="review-card__footer">
+              <span class="review-card__source">Яндекс Карты</span>
+              <span class="review-card__rating">★ 5.0</span>
+            </footer>
+          </article>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Подвал -->
+  <footer class="footer" id="contacts">
+    <div class="container footer__container">
+      <div class="footer__col footer__col--brand">
+        <a href="#" class="footer__logo">
+    <svg class="footer__logo-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M4 26C8 22 14 22 18 26C22 22 28 22 32 26" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M7 21C11 17 15 17 18 20C21 17 25 17 29 21" stroke="#7fc4ec" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M11 15C14 12 16 12 18 14C20 12 22 12 25 15" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
+    </svg>
+    <div class="footer__logo-text">
+      <span class="footer__logo-title">Горный</span>
+      <span class="footer__logo-subtitle">ключ</span>
+    </div>
+  </a>
+
+</div>
+
+      <div class="footer__col">
+        <ul class="footer__menu">
+          <li><a href="#">О нас</a></li>
+          <li><a href="#delivery" id="delivery">Доставка</a></li>
+          <li><a href="#">Оплата</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <div class="footer__heading">Контакты</div>
+        <p class="footer__contact-item"><a href="tel:+79601234567">+7 (960) 123-45-67</a></p>
+        <p class="footer__contact-item"><a href="mailto:email@gorkluch.ru">email@gorkluch.ru</a></p>
+      </div>
+
+      <div class="footer__col">
+        <div class="footer__heading">Адрес</div>
+        <p class="footer__text">г. Москва</p>
+        <p class="footer__text">Пн–Пт: 09:00 - 18:00</p>
+        <p class="footer__text">Сб: 10:00 - 15:00</p>
+      </div>
+
+      <div class="footer__col">
+        <div class="footer__heading">Связь с нами</div>
+        <div class="footer__socials">
+          <a href="#" class="footer__social-link" aria-label="VK">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M13.16 17.86c-5.61 0-8.81-3.85-8.95-10.3h2.81c.1 4.71 2.17 6.71 3.81 7.12V7.56h2.65v4.07c1.62-.17 3.32-2.02 3.9-4.07h2.65c-.43 2.51-2.27 4.36-3.57 5.13 1.3.61 3.38 2.23 4.17 5.17h-2.92c-.62-1.94-2.17-3.45-4.3-3.65v3.65h-.25z"/>
+                </svg>
+          </a>
+          <a href="#" class="footer__social-link" aria-label="Telegram">
+            <svg viewBox="0 0 448 512" fill="currentColor">
+                <path d="M446.7 98.6l-67.6 318.8c-5.2 22.9-18.8 28.6-37.9 17.8l-105-77.3-50.7 48.8c-5.6 5.6-10.3 10.3-20.7 10.3l7.4-107.9L353.6 141c4.4-3.9-.9-6-6.8-2.1L138 276.7l-102.9-32.2c-22.4-7-22.8-22.4 4.6-33.1L415.7 78c18.6-6.9 34.9 4.5 31 20.6z"/>
+            </svg>
+          </a>
+          <a href="#" class="footer__social-link" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19.01L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.81 13.47 3.81 11.91C3.81 7.37 7.5 3.67 12.05 3.67Z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Уведомление -->
+  <div class="toast" id="toast">
+    <div class="toast__content">
+      <span class="toast__icon">✓</span>
+      <span class="toast__message" id="toastMsg">Товар добавлен в корзину</span>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
